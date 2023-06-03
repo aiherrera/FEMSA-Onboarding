@@ -26,8 +26,6 @@ const SignupForm = () => {
   } = useForm<FormData>({ resolver: zodResolver(SignupSchema) })
 
   const onSubmit: SubmitHandler<FormData> = async data => {
-    console.log('errors', errors)
-
     if (!isLoaded) {
       return
     }
@@ -36,16 +34,12 @@ const SignupForm = () => {
       setIsLoading(true)
 
       await signUp.create({
-        firstName: data.first_name,
-        lastName: data.last_name,
         emailAddress: data.email,
         password: data.password,
       })
 
-      // send the email.
       await signUp.prepareEmailAddressVerification({ strategy: 'email_code' })
 
-      // change the UI to our pending section.
       setPendingVerification(true)
       setIsLoading(false)
     } catch (err: any) {
@@ -61,7 +55,7 @@ const SignupForm = () => {
       {!pendingVerification && (
         <>
           <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-            <div>
+            {/* <div>
               <label htmlFor="first_name" className="block text-sm font-medium leading-6 text-gray-900">
                 First name
               </label>
@@ -95,7 +89,7 @@ const SignupForm = () => {
                   {errors.last_name?.message}
                 </p>
               )}
-            </div>
+            </div> */}
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
@@ -192,8 +186,8 @@ const SignupForm = () => {
 
           <p className="mt-10 text-center text-sm text-gray-500">
             Already has an account?
-            <Link href="/login" className="ml-3 font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-              Sign up
+            <Link href="/sign-in" className="ml-3 font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Sign in
             </Link>
           </p>
         </>

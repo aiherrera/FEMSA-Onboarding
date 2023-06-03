@@ -13,8 +13,8 @@ export const SigninSchema = z.object({
 
 export const SignupSchema = z
   .object({
-    first_name: z.string().min(1, { message: 'This field is required' }),
-    last_name: z.string().min(1, { message: 'This field is required' }),
+    // first_name: z.string().min(1, { message: 'This field is required' }),
+    // last_name: z.string().min(1, { message: 'This field is required' }),
     email: z
       .string()
       .min(1, { message: 'This field is required' })

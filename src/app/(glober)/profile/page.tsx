@@ -10,7 +10,7 @@ const Profile = () => {
   return (
     <main className="">
       <ProfileHeader />
-      {/* <ProfileCard /> */}
+      <ProfileCard />
     </main>
   )
 }
