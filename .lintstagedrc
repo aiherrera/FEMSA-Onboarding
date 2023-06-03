@@ -1,0 +1,5 @@
+{
+  "pages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+    "npm run check:format"
+  ]
+}
