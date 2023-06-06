@@ -63,7 +63,7 @@ const Header = () => {
         <div className="hidden xl:flex xl:flex-1 xl:justify-end">
           <Link
             href="#"
-            className="flex items-center gap-3 text-sm font-semibold leading-6 text-gray-900"
+            className="flex cursor-pointer items-center gap-3 text-sm font-semibold leading-6 text-gray-900"
             onClick={() => signOut()}
           >
             Logout

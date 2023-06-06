@@ -1,7 +1,6 @@
 import { EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 import { Link as EmailLink } from '@react-email/link'
 import Image from 'next/image'
-import Link from 'next/link'
 
 const ProfileHeader = () => {
   return (
@@ -32,15 +31,6 @@ const ProfileHeader = () => {
                 <EnvelopeIcon className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
                 <span>Message</span>
               </EmailLink>
-
-              <a
-                href="slack://channel?team=T02CTQY6K&id=D034QH8K1EF&message=Hola%20Alain"
-                target="_blank"
-                className="inline-flex justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-              >
-                <PhoneIcon className="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" aria-hidden="true" />
-                <span>Call</span>
-              </a>
             </div>
           </div>
         </div>
